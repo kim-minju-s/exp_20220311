@@ -6,14 +6,15 @@ var Book = require('../models/book');
 
 
 // 127.0.0.1:3000/book/insert
-// 요청 형식: post
+// 도서 추가하기
 // {'title':'통합구현', 'price':1200, 'author':'가나다'}
 router.post('/insert', async function(req, res, next) {
     try {
-        // 객체 생성
+        // 저장소에 있는 book 스키마 선언
+        // book 객체 생성
         // var 객체명 = new 클래스명();
         var obj = new Book();
-        obj.title = req.body.title;
+        obj.title = req.body.title;     // 객체 변수 안에 데이터 넣기
         obj.price = Number(req.body.price);
         obj.author = req.body.author;
 
@@ -23,6 +24,7 @@ router.post('/insert', async function(req, res, next) {
         if (result._id > 0) {
             return res.json({status:200});
         }
+        // 리턴 값으로 json 형식의 응답을 보냄
         return res.json({status:0});
 
     } catch (e) {
@@ -33,6 +35,7 @@ router.post('/insert', async function(req, res, next) {
 
 // 127.0.0.1:3000/book/select
 // 요청 형식: get
+// 도서 조회하기
 router.get('/select', async function(req, res, next) {
     try {
         const result = await Book.find({}).sort({_id: -1});

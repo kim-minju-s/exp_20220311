@@ -6,9 +6,12 @@ var mongoose = require('mongoose');
 // npm i --save mongoose-sequence
 const AutoIncrement = require('mongoose-sequence')(mongoose);
 
+// 몽구스 스키마
+// 몽고 디비에는 테이블이 아닌 스키마를 사용
+// 데이터를 검증 후 데이터베이스에 넣음
 var Schema = mongoose.Schema;
 
-// entity 만들기
+// entity 저장소 만들기(스키마 사용)
 // 책코드, 책제목, 가격, 저자, 등록일 
 var bookSchema = new Schema({
     _id     : Number,
