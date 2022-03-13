@@ -1,9 +1,8 @@
 var express = require('express');
-var router = express.Router();
+var router = express.Router();  // 라우터 레벨 미들웨어
 
-// book 스키마 모델 가져오기
+// entity저장소에서 book스키마 모델 가져오기
 var Book = require('../models/book');
-
 
 // 127.0.0.1:3000/book/insert
 // 도서 추가하기
@@ -62,7 +61,5 @@ router.delete('/delete', async function(req, res, next) {
     }
 
 });
-
-
 
 module.exports = router;

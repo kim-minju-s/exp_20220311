@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 // npm i mongoose --save
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://id206:pw206@1.234.5.158:37017/db206')
+mongoose.connect('mongodb://id206:pw206@1.234.5.158:37017/db206');
 
 // 열결 되어있는지 확인
 var db = mongoose.connection;
