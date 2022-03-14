@@ -17,7 +17,7 @@ const self = module.exports = {
     // 프런트엔드에서 오는 토큰 검증
     checkToken : async(req, res, next) => {
         try {
-            
+            // 토큰은 headers에 보관됨
             const token = req.headers.auth; // 키는 auth;
             // 토큰의 존재유무 확인
             if (token === null) {

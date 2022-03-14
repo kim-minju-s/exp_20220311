@@ -6,8 +6,8 @@ var router = express.Router();
 const crypto = require('crypto');
 
 // 토큰 발행
-const auth = require('../token/auth');
 const jwt = require('jsonwebtoken');
+const auth = require('../token/auth');
 
 // member 스키마 가져오기 import
 var Member = require('../models/member');
@@ -101,6 +101,7 @@ router.delete('/deletepw', auth.checkToken, async function(req, res, next) {
 });
 
 // 로그인
+// 로그인을 하면 아이디와 암호를 토큰에 저장
 // 127.0.0.1:3000/member/select
 router.post('/select', async function(req, res, next) {
     try {
@@ -113,11 +114,12 @@ router.post('/select', async function(req, res, next) {
         .update(req.body.password).digest('hex');
 
         // DB 연동 키 (_id, password)
-        // 아이디와 비밀번호가 각각 일치하는 항목
+        // 아이디와 비밀번호가 둘 다 일치하는 항목
         const query = {$and : [{_id: req.body._id, password:hashPW}]};
 
         const result = await Member.findOne(query);
         console.log(result);
+
         if (result != null) {
             // 세션에 정보를 추가함
             // 같은서버가 아니기때문에 세션을 확인할 방법없음
@@ -128,7 +130,7 @@ router.post('/select', async function(req, res, next) {
                 USERNAME: result.name,
 
             };
-            // 아이디, 이름를 토큰에 보관
+            // 아이디, 이름, 암호를 토큰에 보관
             // (세션에 추가할 값, 보안 키, 옵션)
             const token = jwt.sign(sessionData, auth.securityKEY, auth.options);
 
@@ -143,12 +145,15 @@ router.post('/select', async function(req, res, next) {
     }
 });
 
+// 아이디 중복 확인하기 
 // 127.0.0.1:3000/member/idcheck
 router.get('/idcheck', async function(req, res, next) {
     try {
-
+        // 쿼리로 받아오는 아이디로 조회하기
         const result = await Member.findOne({_id:req.query._id});
+        // 존재하는 아이디와 존재하지 않는 아이디를 사용하여 결과 값 비교하기
         console.log(result);
+
         if (result != null) {
             return res.send({status:200, result:1});
         }
@@ -160,6 +165,7 @@ router.get('/idcheck', async function(req, res, next) {
     }
 });
 
+// 회원 추가하기 
 // 127.0.0.1:3000/member/insert
 router.post('/insert', async function(req, res, next) {
     try {
