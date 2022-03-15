@@ -15,6 +15,8 @@ db.once('open', function() {
 });
 
 // routes 등록(url)
+require('./routes/chat');   // rest apt 가 아님, url 필요X
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var bookRouter = require('./routes/book');

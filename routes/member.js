@@ -13,8 +13,31 @@ const auth = require('../token/auth');
 var Member = require('../models/member');
 
 
+// 127.0.0.1:3000/member/selectone
+router.get('/selectone', auth.checkToken, async function(req, res, next) {
+    try {
+        const sessionID = req.body.USERID;
+
+        // 쿼리로 받아오는 아이디로 조회하기
+        const result = await Member.findOne({_id:sessionID})
+            .select({"name":1, "age":1});
+        // 존재하는 아이디와 존재하지 않는 아이디를 사용하여 결과 값 비교하기
+        console.log(result);
+
+        if (result != null) {
+            return res.send({status:200, result:result});
+        }
+        return res.send({status:200, result:0});
+
+    } catch (e) {
+        console.error(e);
+        return res.send({status:-1});
+    }
+});
+
 // 로그인: 회원정보 수정
 // 토큰, 이름과 나이 변경
+// 127.0.0.1:3000/member/update
 router.put('/update', auth.checkToken, async function(req, res, next) {
     try {
         const sessionID = req.body.USERID;  // 토큰에서 추출
