@@ -6,7 +6,7 @@ var router = express.Router();
 const app = express();
 const http = require('http');
 const httpServer = http.createServer(app);
-const io = require('socket.io')(httpServer, {path:'/socket'});
+const io = require('socket.io')(httpServer, {path:'/socket', cors: {origins:'*:*'}});
 
 // 클라이언트가 접속했을때 수행됨.
 io.on('connection', (socket) => {
