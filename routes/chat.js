@@ -6,7 +6,8 @@ var router = express.Router();
 const app = express();
 const http = require('http');
 const httpServer = http.createServer(app);
-const io = require('socket.io')(httpServer, {path:'/socket', cors: {origins:'*:*'}});
+const io = require('socket.io')(httpServer, 
+    { path:'/socket', cors : {origin:'*:*'} });
 
 // 클라이언트가 접속했을때 수행됨.
 io.on('connection', (socket) => {
@@ -15,7 +16,7 @@ io.on('connection', (socket) => {
 
     // 클라이언트에서 메시지가 도착했을때
     socket.on('publish', function(data){
-        console.log(data);
+        console.log('socket data--->', data);
 
         // 모든 클라이언트에 메시지를 전송함.
         io.emit('subscribe', {
