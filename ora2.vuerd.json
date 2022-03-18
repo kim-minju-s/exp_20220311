@@ -1,0 +1,584 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -136,
+    "scrollLeft": -16,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "Oracle",
+    "databaseName": "",
+    "canvasType": "@vuerd/builtin-sql-ddl",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "STUDENT1",
+        "comment": "학생 테이블",
+        "columns": [
+          {
+            "name": "STDNO",
+            "comment": "학번",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d272aa90-680e-451a-aca4-b8e034c49fb1"
+          },
+          {
+            "name": "STDNAME",
+            "comment": "학생이름",
+            "dataType": "VARCHAR2(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.4677734375,
+              "widthComment": 60,
+              "widthDataType": 90.28955078125,
+              "widthDefault": 60
+            },
+            "id": "2947b2b8-12db-4030-af15-355612d3246c"
+          },
+          {
+            "name": "STDPN",
+            "comment": "학생연락처",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 67,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5acd7a0c-51dc-4a6c-9325-4f66ad21a57c"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 582,
+          "top": 176,
+          "zIndex": 185,
+          "widthName": 65.22265625,
+          "widthComment": 71.5703125
+        },
+        "visible": true,
+        "id": "21f4d241-c96c-4af5-b015-bbd244888de7"
+      },
+      {
+        "name": "PROFESSER1",
+        "comment": "교수",
+        "columns": [
+          {
+            "name": "PFCODE",
+            "comment": "교수 코드",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b8291224-63b3-4ce9-96a4-b03ce988c621"
+          },
+          {
+            "name": "PFNAME",
+            "comment": "교수 이름",
+            "dataType": "VARCHAR2(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 90.28955078125,
+              "widthDefault": 60
+            },
+            "id": "86d191c0-fb8d-4269-a591-8d495256fac3"
+          },
+          {
+            "name": "PFNUM",
+            "comment": "교수 연락처",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 71.5703125,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "065d92d0-e6c2-469e-a7a2-1ad54fdd919e"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 45,
+          "top": 174,
+          "zIndex": 183,
+          "widthName": 76.5341796875,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "b8144fd4-4eed-4c48-8195-724766bd2e2c"
+      },
+      {
+        "name": "SUBJECT1",
+        "comment": "교과목",
+        "columns": [
+          {
+            "name": "SUBCODE",
+            "comment": "과목 코드",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60.1318359375,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6d077422-e296-40fa-85dd-6fbacd43d775"
+          },
+          {
+            "name": "SUBNAME",
+            "comment": "과목 이름",
+            "dataType": "VARCHAR2(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.9248046875,
+              "widthComment": 60,
+              "widthDataType": 90.28955078125,
+              "widthDefault": 60
+            },
+            "id": "a0811493-0cc8-4bed-8f1f-eeb2a82dfdee"
+          },
+          {
+            "name": "PFCODE",
+            "comment": "교수 코드",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "52efdbd2-9bda-4199-8779-6f7b1b02365b"
+          },
+          {
+            "name": "CLSCODE",
+            "comment": "강의실코드",
+            "dataType": "VARCHAR2(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 67,
+              "widthDataType": 90.28955078125,
+              "widthDefault": 60
+            },
+            "id": "170944ad-8364-41bf-b723-34e75a5a8df1"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 46,
+          "top": 523,
+          "zIndex": 189,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "ef1b8791-8997-437c-9247-2013d00b2f9d"
+      },
+      {
+        "name": "COURSE1",
+        "comment": "",
+        "columns": [
+          {
+            "name": "CURCODE",
+            "comment": "수강번호",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 61.66796875,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "871904e9-19e7-4d7c-be4d-8505dc6795bd"
+          },
+          {
+            "name": "STDNO",
+            "comment": "학번",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "56039e24-0217-4190-ad3e-c86fd6d39539"
+          },
+          {
+            "name": "SUBCODE",
+            "comment": "과목 코드",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60.1318359375,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "18d62f16-0cec-478d-b3e1-ef36e5bd4206"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 593,
+          "top": 522,
+          "zIndex": 160,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "7c7e70f8-275f-4515-8f5b-a525d06638d1"
+      },
+      {
+        "name": "CLASS1",
+        "comment": "강의실",
+        "columns": [
+          {
+            "name": "CLSCODE",
+            "comment": "강의실 코드",
+            "dataType": "VARCHAR2(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 71.5703125,
+              "widthDataType": 90.28955078125,
+              "widthDefault": 60
+            },
+            "id": "77fee6b6-2922-40d0-8a1d-f24cb9910948"
+          },
+          {
+            "name": "CLSADDR",
+            "comment": "강의실 위치",
+            "dataType": "VARCHAR2(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 71.5703125,
+              "widthDataType": 90.28955078125,
+              "widthDefault": 60
+            },
+            "id": "716c4a4d-81d5-46ca-a46b-78bef0a9805a"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 49.1111,
+          "top": 840.888,
+          "zIndex": 191,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "0c0da010-5b2a-4ba9-a09c-8f6ae21aef03"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "b8144fd4-4eed-4c48-8195-724766bd2e2c",
+          "columnIds": [
+            "b8291224-63b3-4ce9-96a4-b03ce988c621"
+          ],
+          "x": 239.429931640625,
+          "y": 304.5,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "ef1b8791-8997-437c-9247-2013d00b2f9d",
+          "columnIds": [
+            "52efdbd2-9bda-4199-8779-6f7b1b02365b"
+          ],
+          "x": 239.607177734375,
+          "y": 523,
+          "direction": "top"
+        },
+        "constraintName": "fk_professer1_to_subject1",
+        "visible": true,
+        "id": "5bc7e34d-09e1-432a-97ea-3850afe41cc1"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "21f4d241-c96c-4af5-b015-bbd244888de7",
+          "columnIds": [
+            "d272aa90-680e-451a-aca4-b8e034c49fb1"
+          ],
+          "x": 775.378662109375,
+          "y": 306.5,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "7c7e70f8-275f-4515-8f5b-a525d06638d1",
+          "columnIds": [
+            "56039e24-0217-4190-ad3e-c86fd6d39539"
+          ],
+          "x": 767.333984375,
+          "y": 522,
+          "direction": "top"
+        },
+        "constraintName": "fk_student1_to_class",
+        "visible": true,
+        "id": "9e3ab24c-0309-4d0b-a9c6-4fc7dae50e96"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "ef1b8791-8997-437c-9247-2013d00b2f9d",
+          "columnIds": [
+            "6d077422-e296-40fa-85dd-6fbacd43d775"
+          ],
+          "x": 433.21435546875,
+          "y": 598.5,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "7c7e70f8-275f-4515-8f5b-a525d06638d1",
+          "columnIds": [
+            "18d62f16-0cec-478d-b3e1-ef36e5bd4206"
+          ],
+          "x": 593,
+          "y": 587.25,
+          "direction": "left"
+        },
+        "constraintName": "fk_subject1_to_course1",
+        "visible": true,
+        "id": "da1e40af-13aa-477c-a1f9-f2d535e794dc"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "0c0da010-5b2a-4ba9-a09c-8f6ae21aef03",
+          "columnIds": [
+            "77fee6b6-2922-40d0-8a1d-f24cb9910948"
+          ],
+          "x": 243.541031640625,
+          "y": 840.888,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "ef1b8791-8997-437c-9247-2013d00b2f9d",
+          "columnIds": [
+            "170944ad-8364-41bf-b723-34e75a5a8df1"
+          ],
+          "x": 239.607177734375,
+          "y": 674,
+          "direction": "bottom"
+        },
+        "constraintName": "fk_class_to_subject1",
+        "visible": true,
+        "id": "ef59a4d8-95b5-439e-89bf-6ee3ef265cfa"
+      }
+    ]
+  }
+}
