@@ -19,8 +19,8 @@
     },
     "database": "Oracle",
     "databaseName": "",
-    "canvasType": "@vuerd/builtin-sql-ddl",
-    "language": "GraphQL",
+    "canvasType": "@vuerd/builtin-generator-code",
+    "language": "Java",
     "tableCase": "pascalCase",
     "columnCase": "camelCase",
     "highlightTheme": "VS2015",
@@ -189,7 +189,7 @@
           "active": false,
           "left": 798.9642,
           "top": 462.2501,
-          "zIndex": 295,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 71.5703125
         },
@@ -343,7 +343,7 @@
           "active": false,
           "left": 288.8219,
           "top": 675.1074,
-          "zIndex": 303,
+          "zIndex": 2,
           "widthName": 89.93408203125,
           "widthComment": 93
         },
@@ -612,7 +612,7 @@
           "active": false,
           "left": 1359.7383,
           "top": 428.8897,
-          "zIndex": 315,
+          "zIndex": 8,
           "widthName": 60,
           "widthComment": 71.5703125
         },
@@ -789,7 +789,7 @@
           "active": false,
           "left": 1324.7859,
           "top": 880.0002,
-          "zIndex": 316,
+          "zIndex": 9,
           "widthName": 70.9228515625,
           "widthComment": 106
         },
@@ -966,7 +966,7 @@
           "active": false,
           "left": 315.4921,
           "top": 239.1865,
-          "zIndex": 308,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1097,7 +1097,7 @@
           "active": false,
           "left": 1124.5237,
           "top": 177.4203,
-          "zIndex": 314,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1228,7 +1228,7 @@
           "active": false,
           "left": 877.4287,
           "top": 739.2507,
-          "zIndex": 309,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 67
         },
@@ -1336,7 +1336,7 @@
           "active": false,
           "left": 774.25,
           "top": 1003,
-          "zIndex": 310,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 93
         },
@@ -1354,7 +1354,7 @@
           "active": false,
           "left": 808.6071428571429,
           "top": 100.14285714285722,
-          "zIndex": 313,
+          "zIndex": 6,
           "width": 205,
           "height": 175
         },
